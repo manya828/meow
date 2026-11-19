@@ -1,0 +1,1476 @@
+# CARPOOLX
+## A Smart, Intelligent and Database-Driven Ride-Sharing Platform
+
+### MASTER DEVELOPMENT INSTRUCTION
+
+Act as an expert full-stack developer, senior UI/UX designer, database architect, backend engineer and software security specialist.
+
+Your task is to design and develop a complete, visually stunning, fully functional web application called **CARPOOLX**.
+
+CarpoolX is a smart ride-sharing platform that connects passengers travelling towards similar destinations with drivers who have available seats.
+
+This is an academic Database Management Systems (DBMS) project, but I want the quality of the application to resemble a professionally developed mobility-tech startup.
+
+The application must combine:
+
+1. Exceptional UI/UX design.
+2. Complete frontend functionality.
+3. A functional Node.js and Express backend.
+4. A MySQL relational database.
+5. Secure authentication and role-based access.
+6. Intelligent ride matching.
+7. Reliable booking and transaction management.
+8. Database integrity and exception handling.
+9. Map and traffic integration.
+10. Complete GitHub and VS Code compatibility.
+
+**ABSOLUTELY IMPORTANT:**
+
+Do not build a static prototype, a frontend-only mockup or a collection of non-functional dashboard screens.
+
+I want an actual working application with real database operations and functional business logic.
+
+The application must be portable outside Bolt.new. I must be able to synchronize the complete source code to GitHub, clone it into Visual Studio Code, configure the environment and run it locally without depending on Bolt's preview environment.
+
+---
+
+# PART 1: PROJECT IDENTITY AND PURPOSE
+
+## 1.1 Project Name
+
+CARPOOLX
+
+## 1.2 Tagline
+
+"Move Together. Go Further."
+
+Alternative brand statement:
+
+"Your Route. Your People. One Shared Ride."
+
+## 1.3 Project Description
+
+CarpoolX is a database-driven carpooling platform designed to connect passengers and drivers travelling along similar routes.
+
+Passengers can search for rides, identify compatible journeys, reserve seats and share transportation expenses.
+
+Drivers can publish available rides, manage booking requests and coordinate journeys.
+
+Administrators can monitor platform activities, manage users, transactions and reports.
+
+Carpool coordinators can assist with passenger-driver matching, ride coordination and operational issue management.
+
+The system aims to reduce transportation expenses, improve vehicle occupancy, reduce unnecessary traffic and make shared transportation more accessible.
+
+## 1.4 Primary Location
+
+Bengaluru, Karnataka, India.
+
+Use realistic Bengaluru locations for demonstration data, such as:
+- Electronic City.
+- Whitefield.
+- Marathahalli.
+- Indiranagar.
+- Koramangala.
+- Hebbal.
+- Yelahanka.
+- Jayanagar.
+- MG Road.
+- Banashankari.
+
+Use actual geographic coordinates when map functionality is configured.
+
+---
+
+# PART 2: TECHNOLOGY STACK AND PROJECT ARCHITECTURE
+
+Use this technology stack.
+
+## Frontend
+
+- React.js.
+- JavaScript or TypeScript.
+- Tailwind CSS.
+- Lucide React icons.
+- React Router.
+- Reusable component architecture.
+- Responsive layouts.
+
+## Backend
+
+- Node.js.
+- Express.js.
+- REST API architecture.
+- mysql2/promise.
+- bcrypt.
+- JWT or secure session-based authentication.
+- dotenv.
+- Centralized error-handling middleware.
+
+## Database
+
+- MySQL.
+- Database name: carpoolx.
+- Relational database architecture.
+- Foreign keys and constraints.
+- Transactions and locking.
+- Normalized database design.
+
+## Maps
+
+- TomTom Maps API.
+- TomTom Routing API.
+- TomTom Traffic API, where supported.
+
+## Development Tools
+
+- Bolt.new for AI-assisted development.
+- GitHub for source-code management.
+- Visual Studio Code for local development.
+- Node.js and npm for execution.
+
+## IMPORTANT: EXISTING BACKEND PRESERVATION
+
+I have previously worked on the CarpoolX project using Node.js, Express and MySQL.
+
+The backend has previously returned a successful database connection message.
+
+Therefore:
+
+1. Inspect the existing project structure before making changes.
+2. Preserve existing working backend code.
+3. Preserve the MySQL database named carpoolx.
+4. Preserve existing database connection configurations where possible.
+5. Reuse working API endpoints where appropriate.
+6. Do not replace MySQL with Supabase or Firebase.
+7. Do not create a separate unrelated database.
+8. Do not overwrite existing working code unnecessarily.
+
+If the existing repository or database files are not accessible in the current Bolt workspace, clearly identify that limitation instead of pretending to have inspected them.
+
+Create an integration-ready architecture that can connect to my existing MySQL installation.
+
+Never place database credentials or secret API keys in frontend code.
+
+---
+
+# PART 3: EXTREMELY IMPORTANT — VISUAL DESIGN AND UI/UX
+
+Visual quality is one of the highest priorities of this project.
+
+I do not want a generic college project website.
+
+I do not want ordinary dashboard templates with plain white backgrounds, basic tables and boring cards.
+
+I want CARPOOLX to look like a premium, futuristic, professionally funded mobility technology startup.
+
+The application should combine the visual quality of:
+- Premium mobility applications.
+- Modern SaaS platforms.
+- Futuristic transportation interfaces.
+- High-end automotive websites.
+- Advanced analytics dashboards.
+
+## 3.1 Brand Identity
+
+Brand name: CARPOOLX
+
+Tagline: Move Together. Go Further.
+
+Create a custom, professional logo using a combination of:
+- A moving vehicle or road-inspired symbol.
+- Connected route lines.
+- Modern typography.
+
+## 3.2 Color Palette
+
+Use a consistent design system.
+
+Primary background:
+#080E1C
+
+Secondary background:
+#0D1628
+
+Card background:
+#111D35
+
+Electric blue:
+#2563EB
+
+Neon cyan:
+#22D3EE
+
+Soft violet:
+#A78BFA
+
+Primary text:
+#F8FAFC
+
+Secondary text:
+#94A3B8
+
+Use subtle gradients and glassmorphism.
+
+Avoid excessive neon colors and visual clutter.
+
+## 3.3 Landing Page — Cinematic Hero
+
+The landing page must create an immediate WOW impression.
+
+Create a full-width, visually impressive hero section.
+
+Visual requirements:
+- A large, high-quality 3D-rendered futuristic electric vehicle.
+- Dark modern city environment.
+- Cinematic blue and cyan lighting.
+- Glowing road lines.
+- Atmospheric background gradients.
+- Floating journey information cards.
+- Subtle animated route paths.
+- Smooth scrolling and transitions.
+
+The vehicle should be a major visual focal point.
+
+Hero heading:
+
+"Move Together.
+Go Further."
+
+Supporting text:
+
+"Discover smarter journeys, connect with people travelling your way, and make every ride count."
+
+Primary buttons:
+- Find Your Ride.
+- Offer a Ride.
+
+Secondary information:
+- Smart route matching.
+- Shared transportation.
+- Secure booking.
+
+Do not make the hero section look like a simple form placed over a stock background.
+
+## 3.4 Landing Page Sections
+
+Create the following sections:
+
+1. Premium navigation bar.
+2. Cinematic hero.
+3. How CarpoolX works.
+4. Smart features.
+5. Interactive Bengaluru map section.
+6. Benefits of shared transportation.
+7. Platform statistics backed by real data when available.
+8. Testimonials using clearly identified demonstration content.
+9. Final call-to-action section.
+10. Premium footer.
+
+## 3.5 Navigation Bar
+
+Include:
+- CarpoolX logo.
+- Home.
+- Explore Rides.
+- How It Works.
+- About.
+- Login.
+- Get Started.
+
+Use transparent or glass-style navigation with elegant hover effects.
+
+## 3.6 Micro-interactions
+
+Implement:
+- Smooth page transitions.
+- Hover animations.
+- Subtle card elevation.
+- Glowing button effects.
+- Animated loading skeletons.
+- Dropdown transitions.
+- Animated status indicators.
+- Toast notifications.
+- Modal transitions.
+- Smooth sidebar collapse.
+- Responsive navigation.
+
+Keep animations polished and purposeful.
+
+## 3.7 Dashboard Design
+
+Every dashboard must have:
+- A premium collapsible sidebar.
+- Consistent navigation.
+- Modern top navigation.
+- Search functionality.
+- Notification panel.
+- Profile menu.
+- Elegant KPI cards.
+- Attractive charts.
+- Data tables.
+- Empty states.
+- Loading states.
+- Error states.
+- Contextual action buttons.
+
+Use reusable design components.
+
+Every dashboard must look distinct while maintaining the same CarpoolX visual identity.
+
+---
+
+# PART 4: FOUR USER ROLES
+
+Create four independent user experiences.
+
+1. Passenger / Customer.
+2. Driver.
+3. Administrator.
+4. Carpool Coordinator.
+
+Each role must have:
+- Separate dashboard.
+- Separate navigation.
+- Role-specific permissions.
+- Appropriate data visibility.
+- Protected routes.
+- Role-specific actions.
+
+Do not rely on frontend role checks alone. Verify permissions on the backend.
+
+## 4.1 PASSENGER DASHBOARD
+
+Create a premium passenger experience.
+
+Sidebar:
+- Overview.
+- Find a Ride.
+- My Bookings.
+- Upcoming Rides.
+- Ride History.
+- Payments.
+- Notifications.
+- Profile.
+- Help and Support.
+- Logout.
+
+Overview cards:
+- Total rides booked.
+- Upcoming rides.
+- Completed rides.
+- Cancelled rides.
+- Total money spent.
+
+Include a recent activity section.
+
+### Find a Ride
+
+Create an attractive ride-search interface.
+
+Input fields:
+- Pickup location.
+- Destination.
+- Travel date.
+- Preferred departure time.
+- Number of passengers.
+- Optional preferences.
+
+Provide location autocomplete when the maps integration is configured.
+
+### Ride Search Results
+
+Display beautiful ride cards containing:
+- Driver name.
+- Driver rating, if available.
+- Vehicle information.
+- Registration number, where appropriate.
+- Pickup location.
+- Destination.
+- Departure time.
+- Available seats.
+- Estimated distance.
+- Fare per passenger.
+- Route preview.
+- View Details.
+- Book Ride.
+
+Add sorting and filtering.
+
+Filters:
+- Departure time.
+- Available seats.
+- Fare.
+- Route compatibility.
+
+### Ride Booking
+
+Allow passengers to:
+- View complete ride details.
+- Select seats.
+- View fare calculations.
+- Review booking information.
+- Confirm booking.
+
+Show booking confirmation after successful backend processing.
+
+Booking statuses:
+- Pending.
+- Confirmed.
+- Rejected.
+- Cancelled.
+- Completed.
+
+### My Bookings
+
+Show:
+- Booking ID.
+- Driver information.
+- Ride information.
+- Number of seats.
+- Fare.
+- Booking date.
+- Booking status.
+
+Allow permitted cancellations.
+
+### Payments
+
+Display:
+- Transaction ID.
+- Booking ID.
+- Amount.
+- Payment method.
+- Payment status.
+- Transaction date.
+
+Use simulated payment records unless an actual payment gateway is configured.
+
+Never claim that a payment has been processed externally when it has only been simulated.
+
+---
+
+# PART 5: DRIVER DASHBOARD
+
+Create a separate premium dashboard for drivers.
+
+Sidebar:
+- Overview.
+- Publish a Ride.
+- My Rides.
+- Booking Requests.
+- Passengers.
+- Earnings.
+- Ride History.
+- Notifications.
+- Profile.
+- Logout.
+
+Overview:
+- Total rides.
+- Upcoming rides.
+- Completed rides.
+- Pending booking requests.
+- Seats booked.
+- Estimated earnings.
+
+### Publish a Ride
+
+Fields:
+- Starting location.
+- Destination.
+- Intermediate stops.
+- Travel date.
+- Departure time.
+- Vehicle model.
+- Vehicle registration number.
+- Vehicle capacity.
+- Available seats.
+- Fare per passenger.
+- Additional instructions.
+
+Validate the information on the frontend and backend.
+
+### My Rides
+
+Display all rides created by the driver.
+
+Allow:
+- View ride.
+- Update ride.
+- Cancel ride according to business rules.
+- View passenger bookings.
+- Mark ride as completed.
+
+### Booking Requests
+
+Display:
+- Passenger information.
+- Pickup and destination.
+- Number of seats requested.
+- Booking time.
+- Fare.
+
+Allow drivers to accept or reject requests.
+
+When accepting a request, perform all required seat-capacity checks using a safe database transaction.
+
+### Earnings
+
+Display:
+- Completed ride earnings.
+- Pending settlements.
+- Ride-wise earnings.
+- Monthly earnings chart.
+
+Clearly distinguish estimated earnings from actual completed transactions.
+
+---
+
+# PART 6: ADMINISTRATOR DASHBOARD
+
+Build a premium administrative control center.
+
+Sidebar:
+- Overview.
+- User Management.
+- Passenger Management.
+- Driver Management.
+- Coordinator Management.
+- Ride Management.
+- Booking Management.
+- Transaction Management.
+- Reports and Analytics.
+- Audit Logs.
+- System Settings.
+- Logout.
+
+### Overview
+
+Display:
+- Total users.
+- Total passengers.
+- Total drivers.
+- Total coordinators.
+- Total rides.
+- Active rides.
+- Total bookings.
+- Confirmed bookings.
+- Cancelled bookings.
+- Completed rides.
+- Total recorded transaction value.
+
+Use database-backed charts.
+
+Charts:
+- Monthly booking trends.
+- User registrations.
+- Ride activity.
+- Transaction statistics.
+- Ride completion rates.
+
+### User Management
+
+Allow:
+- View all users.
+- Search users.
+- Filter by role.
+- View profile.
+- Update permitted information.
+- Activate or deactivate accounts.
+- Assign authorized coordinator roles.
+
+### Ride Management
+
+Allow:
+- View rides.
+- Search rides.
+- Filter by date.
+- Filter by status.
+- Inspect ride details.
+- Monitor drivers and passengers.
+- Investigate cancellations.
+
+### Booking Management
+
+Allow:
+- View bookings.
+- Search by booking ID.
+- Filter booking status.
+- View associated passenger and driver.
+- Investigate booking conflicts.
+
+### Transaction Management
+
+Allow:
+- View transactions.
+- Search transaction IDs.
+- Filter payment status.
+- View refund records.
+- Investigate failed payments.
+
+### Reports
+
+Provide:
+- Passenger report.
+- Driver report.
+- Ride report.
+- Booking report.
+- Monthly transaction report.
+- Cancellation report.
+
+Reports must use actual database queries.
+
+---
+
+# PART 7: CARPOOL COORDINATOR DASHBOARD
+
+Create a separate operational dashboard.
+
+The coordinator acts as an intermediary who helps organize compatible passenger and driver journeys.
+
+Sidebar:
+- Overview.
+- Ride Requests.
+- Ride Matching.
+- Active Carpool Groups.
+- Booking Monitoring.
+- Issue Resolution.
+- Reports.
+- Profile.
+- Logout.
+
+### Overview
+
+Display:
+- Pending requests.
+- Matching requests.
+- Active carpool groups.
+- Confirmed bookings.
+- Unresolved issues.
+
+### Ride Requests
+
+Allow coordinators to inspect:
+- Passenger details.
+- Pickup location.
+- Destination.
+- Travel date.
+- Preferred time.
+- Seats requested.
+
+### Ride Matching
+
+Create a sophisticated visual interface to compare compatible requests.
+
+Display:
+- Route compatibility.
+- Pickup proximity.
+- Destination compatibility.
+- Time compatibility.
+- Seat requirements.
+- Driver availability.
+
+Allow coordinators to recommend suitable matches.
+
+The coordinator must not bypass passenger or driver confirmation.
+
+### Active Carpool Groups
+
+Display:
+- Group ID.
+- Passengers.
+- Driver.
+- Vehicle.
+- Route.
+- Number of seats.
+- Booking status.
+
+### Issue Resolution
+
+Allow coordinators to record:
+- Driver cancellation.
+- Passenger cancellation.
+- Delayed ride.
+- Insufficient seats.
+- Booking conflicts.
+- Reported issues.
+
+Maintain an issue history.
+
+Do not allow coordinators to access sensitive payment credentials or unrestricted administrative settings.
+
+---
+
+# PART 8: AUTHENTICATION AND AUTHORIZATION
+
+Create:
+- Login.
+- Registration.
+- Forgot password.
+- Reset password.
+- Logout.
+
+Registration fields:
+- Full name.
+- Email.
+- Phone.
+- Password.
+- Confirm password.
+- User role.
+
+Public registration should allow Passenger and Driver roles.
+
+Administrator and Coordinator accounts must be assigned through an authorized administrative process.
+
+Requirements:
+- bcrypt password hashing.
+- Secure authentication.
+- Protected routes.
+- Backend role verification.
+- Session expiration.
+- Secure logout.
+- Input validation.
+- Duplicate email prevention.
+
+After login, redirect users to their respective dashboards.
+
+Never store plaintext passwords.
+
+Never allow users to change their privileges by manipulating frontend requests.
+
+---
+
+# PART 9: INTELLIGENT RIDE MATCHING
+
+Implement actual ride compatibility logic.
+
+Matching factors:
+
+1. Pickup proximity.
+2. Destination compatibility.
+3. Route overlap.
+4. Travel date.
+5. Departure-time compatibility.
+6. Available seats.
+
+Use geographic coordinates when available.
+
+Do not match users based only on similar location names.
+
+Display a compatibility score and explanation.
+
+Example:
+- Pickup within acceptable distance.
+- Destination lies along the driver's route.
+- Departure times are compatible.
+- Sufficient seats are available.
+
+Allow configurable matching thresholds.
+
+Provide ranked matching results.
+
+Ensure that suggested matches are validated again before booking.
+
+---
+
+# PART 10: MAPS AND BENGALURU TRAFFIC
+
+Integrate TomTom Maps API.
+
+Features:
+- Interactive Bengaluru map.
+- Searchable locations.
+- Pickup and destination markers.
+- Route visualization.
+- Intermediate stops.
+- Route distance.
+- Estimated travel time.
+- Alternative routes.
+- Traffic visualization where available.
+
+Use TomTom Routing API and Traffic API where appropriate.
+
+All API keys must be configured securely.
+
+If live traffic credentials are missing:
+- Display a clear configuration message.
+- Provide a fallback map or route preview where possible.
+- Do not fabricate traffic data.
+
+The map must be responsive and visually integrated into the dashboard.
+
+---
+
+# PART 11: MYSQL DATABASE DESIGN
+
+Database name: carpoolx.
+
+Inspect the existing database schema before creating or altering tables.
+
+Preserve existing data and compatible structures.
+
+Create or adapt a normalized relational schema.
+
+Suggested logical entities:
+
+1. Users.
+2. Passengers.
+3. Drivers.
+4. Coordinators.
+5. Vehicles.
+6. Rides.
+7. Ride_Stops.
+8. Bookings.
+9. Payments.
+10. Transactions.
+11. Carpool_Groups.
+12. Carpool_Members.
+13. Notifications.
+14. Support_Tickets.
+15. Issue_Reports.
+16. Audit_Logs.
+
+Use suitable relationships and cardinalities.
+
+Database requirements:
+- Primary keys.
+- Foreign keys.
+- NOT NULL.
+- UNIQUE.
+- CHECK constraints where supported.
+- Appropriate indexes.
+- Referential integrity.
+- Normalization to 3NF where appropriate.
+- Suitable decimal precision for monetary values.
+- Appropriate date and time types.
+
+Avoid storing duplicate information unnecessarily.
+
+Create:
+- ER diagram.
+- Relational schema.
+- SQL table creation scripts.
+- Foreign key definitions.
+- Sample data scripts.
+- Database documentation.
+
+Do not create duplicate tables if equivalent working tables already exist.
+
+If schema changes are needed, provide safe migration scripts and explain the changes.
+
+---
+
+# PART 12: SQL AND DBMS CONCEPTS
+
+The project must demonstrate meaningful DBMS implementation.
+
+Implement examples of:
+
+### Basic SQL
+- SELECT.
+- INSERT.
+- UPDATE.
+- DELETE.
+- WHERE.
+- ORDER BY.
+- DISTINCT.
+- BETWEEN.
+- IN.
+- LIKE.
+- IS NULL.
+
+### Aggregate functions
+- COUNT.
+- SUM.
+- AVG.
+- MIN.
+- MAX.
+- GROUP BY.
+- HAVING.
+
+### Joins
+- INNER JOIN.
+- LEFT JOIN.
+- Multi-table joins.
+
+### Advanced SQL
+- Subqueries.
+- Correlated subqueries where relevant.
+- EXISTS.
+- NOT EXISTS.
+- CASE.
+- Date-based queries.
+
+### Views
+
+Create views for:
+- Active rides with driver details.
+- Booking information with passenger and ride details.
+- Driver earnings.
+- Monthly booking summaries.
+
+### SQL Documentation
+
+Create:
+
+database/schema.sql
+database/seed.sql
+database/queries.sql
+database/views.sql
+database/transactions.sql
+
+Include meaningful queries that correspond to actual CarpoolX functionality.
+
+---
+
+# PART 13: SAFE TRANSACTION MANAGEMENT
+
+This is one of the most important academic and technical requirements.
+
+Implement actual MySQL transactions.
+
+### Booking Workflow
+
+1. Passenger selects a ride.
+2. Backend validates the passenger.
+3. Start database transaction.
+4. Lock the relevant ride record using SELECT ... FOR UPDATE.
+5. Check whether the ride is active.
+6. Verify available seats.
+7. Calculate the fare on the backend.
+8. Insert booking.
+9. Update available seats.
+10. Create the associated payment or transaction record.
+11. Commit the transaction.
+
+If any operation fails:
+- Roll back the entire transaction.
+- Do not leave partially inserted bookings.
+- Do not incorrectly reduce available seats.
+- Return an appropriate error.
+
+Prevent:
+- Overbooking.
+- Duplicate booking.
+- Negative seat counts.
+- Booking cancelled rides.
+- Concurrent booking conflicts.
+- Duplicate transaction records.
+
+Use idempotency protection for payment-related requests.
+
+### Cancellation Workflow
+
+1. Verify booking ownership and status.
+2. Begin transaction.
+3. Lock the relevant records.
+4. Validate cancellation eligibility.
+5. Update booking status.
+6. Restore seats only when appropriate.
+7. Create refund or adjustment records when applicable.
+8. Commit.
+
+If anything fails, roll back.
+
+Use proper concurrency handling and database constraints.
+
+---
+
+# PART 14: EXCEPTION HANDLING
+
+Implement centralized backend error handling.
+
+Authentication errors:
+- Incorrect password.
+- Duplicate registration.
+- Invalid token.
+- Expired session.
+- Unauthorized access.
+
+Booking errors:
+- No available seats.
+- Invalid booking.
+- Duplicate booking.
+- Cancelled ride.
+- Invalid cancellation.
+- Insufficient capacity.
+
+Driver errors:
+- Invalid vehicle details.
+- Invalid seat count.
+- Invalid date.
+- Unauthorized ride modification.
+
+Database errors:
+- Connection failure.
+- Foreign key violation.
+- Duplicate unique key.
+- Constraint violation.
+- Transaction failure.
+- Deadlock.
+
+General errors:
+- Missing inputs.
+- Invalid date.
+- Invalid location.
+- External API failure.
+- Server errors.
+
+Use meaningful HTTP status codes.
+
+Display understandable messages to users.
+
+Log technical details securely on the backend.
+
+Never expose stack traces, SQL statements or database credentials to the frontend.
+
+---
+
+# PART 15: SECURITY
+
+Implement:
+- Password hashing.
+- Secure authentication.
+- Backend authorization.
+- Role-based access.
+- SQL injection prevention.
+- Parameterized queries.
+- Input validation.
+- Rate limiting.
+- CORS configuration.
+- Environment variable protection.
+- Secure cookie configuration where applicable.
+- Audit logs.
+
+Users must not access another user's private data by modifying IDs in requests.
+
+Every sensitive operation must be validated by the backend.
+
+---
+
+# PART 16: NOTIFICATIONS
+
+Create a database-backed notification system.
+
+Passenger notifications:
+- Booking confirmation.
+- Booking rejection.
+- Ride cancellation.
+- Schedule changes.
+
+Driver notifications:
+- New booking request.
+- Booking acceptance.
+- Booking rejection.
+- Ride updates.
+
+Coordinator notifications:
+- New ride request.
+- Matching conflicts.
+- Reported issues.
+
+Administrator notifications:
+- Important system events.
+- Repeated failures.
+- Operational issues.
+
+Include unread notification indicators and a notification history.
+
+---
+
+# PART 17: TESTING AND QUALITY ASSURANCE
+
+Test the actual application.
+
+Required test cases:
+
+1. Passenger registration.
+2. Driver registration.
+3. Duplicate email registration.
+4. Valid login.
+5. Invalid login.
+6. Role-based redirection.
+7. Unauthorized dashboard access.
+8. Ride publishing.
+9. Ride search.
+10. Compatible ride matching.
+11. Successful booking.
+12. Booking without sufficient seats.
+13. Two passengers requesting the last available seat.
+14. Successful cancellation.
+15. Transaction rollback after failure.
+16. Duplicate transaction prevention.
+17. Driver access restrictions.
+18. Administrator user management.
+19. Coordinator matching.
+20. Invalid foreign key operation.
+21. Database connection failure.
+22. Notification generation.
+
+Create a test report containing:
+- Test ID.
+- Test description.
+- Input.
+- Expected output.
+- Actual output.
+- Pass/fail status.
+
+Do not claim a test passed without executing or verifying it.
+
+---
+
+# PART 18: COMPLETE SOURCE CODE AND GITHUB PORTABILITY
+
+THIS SECTION IS MANDATORY.
+
+I am using Bolt.new for AI-assisted application development, but I do not want my application to remain dependent on Bolt.
+
+I want complete access to the actual source code.
+
+### GitHub Requirements
+
+Prepare the project for GitHub synchronization.
+
+Use a clean repository structure.
+
+Include:
+- React frontend source code.
+- Node.js backend source code.
+- Express routes.
+- Controllers.
+- Services.
+- Middleware.
+- Database SQL scripts.
+- Documentation.
+- package.json.
+- README.md.
+- .env.example.
+- .gitignore.
+
+Make the project compatible with GitHub integration in Bolt.new.
+
+When GitHub is connected:
+- Synchronize the project with the selected repository.
+- Preserve the source-code structure.
+- Ensure that changes can be synchronized back and forth where supported.
+- Avoid committing credentials or private API keys.
+
+If GitHub integration requires user authorization, guide me through the connection rather than assuming it is already connected.
+
+### VS CODE REQUIREMENTS
+
+The project must be capable of running independently in VS Code.
+
+I should be able to:
+
+1. Clone the GitHub repository.
+2. Open it in VS Code.
+3. Install frontend dependencies.
+4. Install backend dependencies.
+5. Configure my MySQL connection.
+6. Create or connect to the carpoolx database.
+7. Configure environment variables.
+8. Start the backend.
+9. Start the frontend.
+10. Access the application through localhost.
+
+Provide the exact commands.
+
+Example:
+
+Frontend:
+npm install
+npm run dev
+
+Backend:
+npm install
+npm run dev
+
+Adapt these commands to the actual package scripts.
+
+Provide a complete README with:
+- Prerequisites.
+- Installation instructions.
+- Database configuration.
+- Environment variables.
+- Backend setup.
+- Frontend setup.
+- API documentation.
+- GitHub instructions.
+- Local execution instructions.
+- Troubleshooting.
+
+### NO PLATFORM LOCK-IN
+
+Do not make essential application functionality dependent on Bolt's private runtime, preview environment or deployment service.
+
+Do not leave important data only in temporary local storage.
+
+Do not use frontend-only simulated APIs as substitutes for backend functionality.
+
+The backend and database must be independently configurable.
+
+All project source code must remain accessible through the GitHub repository.
+
+If any generated service requires platform-specific configuration, clearly document the dependency and provide a portable alternative.
+
+---
+
+# PART 19: PROJECT FOLDER STRUCTURE
+
+Use the following structure where compatible with the existing repository:
+
+CarpoolX/
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── dashboards/
+│   │   ├── layouts/
+│   │   ├── services/
+│   │   ├── hooks/
+│   │   ├── context/
+│   │   └── styles/
+│   └── package.json
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── routes/
+│   ├── middleware/
+│   ├── services/
+│   ├── utils/
+│   ├── validators/
+│   ├── server.js
+│   └── package.json
+│
+├── database/
+│   ├── schema.sql
+│   ├── seed.sql
+│   ├── queries.sql
+│   ├── views.sql
+│   └── transactions.sql
+│
+├── docs/
+│   ├── ER_Diagram/
+│   ├── API_Documentation/
+│   └── Test_Cases/
+│
+├── .gitignore
+└── README.md
+
+Adapt the structure if necessary, but keep frontend, backend and database responsibilities clearly separated.
+
+---
+
+# PART 20: ACADEMIC DBMS PRESENTATION REQUIREMENTS
+
+The project must support the following presentation structure.
+
+1. Project Title.
+2. Problem Definition.
+3. Objectives and Scope.
+4. Proposed Solution and Workflow.
+5. Software Requirements and Technology Selection.
+6. System Architecture.
+7. Database Design and ER Diagram.
+8. Implementation Screenshots.
+9. Testing and Results.
+10. Conclusion and Future Enhancements.
+11. Final Live Demonstration.
+12. Questions and Discussion.
+
+Prepare supporting documentation for:
+
+- Problem statement.
+- Project objectives.
+- User roles.
+- Technology justification.
+- System architecture.
+- ER diagram.
+- Relational schema.
+- Primary keys.
+- Foreign keys.
+- Constraints.
+- Normalization.
+- SQL queries.
+- CRUD operations.
+- Transaction management.
+- Exception handling.
+- Test cases.
+
+The project must be demonstrable through an actual running application, not just screenshots.
+
+---
+
+# PART 21: DEVELOPMENT PHASES
+
+Do not try to generate the entire application in one uncontrolled operation.
+
+Develop systematically.
+
+## PHASE 1 — UI FOUNDATION
+
+Build:
+- Design system.
+- Logo and branding.
+- Landing page.
+- Login page.
+- Registration page.
+- Navigation.
+- Reusable components.
+
+Prioritize the premium visual identity.
+
+## PHASE 2 — DASHBOARDS
+
+Build:
+- Passenger dashboard.
+- Driver dashboard.
+- Administrator dashboard.
+- Coordinator dashboard.
+
+Implement navigation and role-specific interfaces.
+
+## PHASE 3 — AUTHENTICATION
+
+Implement:
+- Registration.
+- Login.
+- Password hashing.
+- Authorization.
+- Protected routes.
+- User roles.
+
+## PHASE 4 — DATABASE AND BACKEND
+
+Inspect and connect the existing MySQL database.
+
+Implement:
+- Database connection.
+- REST API.
+- CRUD operations.
+- Validation.
+- Database relationships.
+- SQL constraints.
+
+## PHASE 5 — CORE CARPOOL FUNCTIONALITY
+
+Implement:
+- Publish ride.
+- Search ride.
+- Match ride.
+- Book seats.
+- Accept and reject requests.
+- Cancel booking.
+- Manage ride status.
+
+## PHASE 6 — ADVANCED DBMS
+
+Implement:
+- Safe SQL transactions.
+- Concurrent booking protection.
+- Rollback.
+- Views.
+- Reports.
+- Advanced queries.
+- Exception handling.
+
+## PHASE 7 — MAPS AND ADMINISTRATION
+
+Implement:
+- TomTom map.
+- Route visualization.
+- Traffic integration.
+- Coordinator tools.
+- Admin reports.
+- Notifications.
+
+## PHASE 8 — FINAL VERIFICATION
+
+Test all major functionality.
+
+Fix errors.
+
+Prepare documentation.
+
+Verify GitHub synchronization.
+
+Verify independent local execution in VS Code.
+
+---
+
+# PART 22: IMPORTANT INSTRUCTIONS FOR THE AI DEVELOPER
+
+Follow these rules throughout development.
+
+1. Never sacrifice functionality for appearance.
+2. Never sacrifice visual quality for basic functionality.
+3. Preserve the existing MySQL architecture.
+4. Inspect existing files before modifying them.
+5. Do not replace existing working code unnecessarily.
+6. Do not generate fake functionality.
+7. Do not use hardcoded mock data for features claimed to be connected.
+8. Clearly label sample and demonstration data.
+9. Validate every sensitive operation on the backend.
+10. Use parameterized SQL queries.
+11. Use real database transactions for booking operations.
+12. Ensure that every dashboard action works.
+13. Ensure responsive design.
+14. Use reusable components.
+15. Maintain consistent visual quality.
+16. Keep source code clean and understandable.
+17. Document installation and execution.
+18. Keep the project GitHub-compatible.
+19. Ensure the project can run independently in VS Code.
+20. Never claim a feature is complete until it has been implemented and verified.
+
+If any requirement cannot be completed because credentials, API keys, database access or other configuration is missing, explain exactly what is needed and continue implementing the parts that can be completed.
+
+Do not silently skip requirements.
+
+---
+
+# FINAL EXPECTATION
+
+I want CARPOOLX to be a complete, visually exceptional, secure and functional ride-sharing application.
+
+When someone opens the website, the first impression should be:
+
+"This looks like a real transportation technology startup."
+
+When someone uses the application, the experience should be smooth and functional.
+
+When my professor examines the project, I should be able to explain:
+- The four user roles.
+- The system architecture.
+- The relational database.
+- SQL operations.
+- Database constraints.
+- Ride matching.
+- Safe transactions.
+- Rollback.
+- Exception handling.
+- CRUD operations.
+
+When I open the project in VS Code, I must have access to the actual frontend, backend and database source files.
+
+When I push the project to GitHub, I must retain control of the source code.
+
+**START NOW.**
+
+First inspect the available project files and explain the existing architecture.
+
+Then present a clear implementation plan.
+
+Next, create the complete premium CarpoolX design foundation.
+
+After that, implement the application phase by phase, maintaining the existing project architecture and all the requirements above.
+
+Do not stop at a visual prototype.
+
+Build the actual CarpoolX application.
